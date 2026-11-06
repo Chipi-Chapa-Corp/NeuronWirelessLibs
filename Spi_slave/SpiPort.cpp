@@ -103,9 +103,8 @@ bool SpiPort::is_connected() {
 bool SpiPort::sendPacket(Packet &packet) {
     if (spi_slave == nullptr) return false;
 
-    spi_slave->tx_fifo->put(&packet);
-
-    return true;
+    // Preserve queue backpressure: a dropped palette/map packet must be retried.
+    return spi_slave->tx_fifo->put(&packet);
 }
 
 void SpiPort::clearSend() {
