@@ -1,6 +1,7 @@
 [submodule "libraries/Kaleidoscope"]
 	path = Kaleidoscope
-	url = https://github.com/Dygmalab/Kaleidoscope-Dygma.git
+	url = https://github.com/Chipi-Chapa-Corp/Kaleidoscope-Dygma.git
+	branch = raise2-v1.5.0-splash
 [submodule "libraries/UpgradeKeyscanner"]
 	path = UpgradeKeyscanner
 	url = https://github.com/Dygmalab/KaleidoscopePluginKeyScannerUpgrade.git
